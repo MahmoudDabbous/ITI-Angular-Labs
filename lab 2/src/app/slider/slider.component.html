@@ -1,0 +1,29 @@
+<div class="slideshow-container">
+  <div class="mySlides fade" style="display: block; text-align: center">
+    <div class="numbertext">{{ photoNumber }}</div>
+    <img [src]="imgSrc" style="width: 25%" />
+    <div class="text">{{ name }}</div>
+  </div>
+</div>
+<br />
+<div style="text-align: center">
+  <span
+    [class]="index === 0 ? 'dot active' : 'dot'"
+    (click)="getIndex(0)"
+  ></span>
+  <span
+    [class]="index === 1 ? 'dot active' : 'dot'"
+    (click)="getIndex(1)"
+  ></span>
+  <span
+    [class]="index === 2 ? 'dot active' : 'dot'"
+    (click)="getIndex(2)"
+  ></span>
+</div>
+
+<div style="text-align: center">
+  <button class="sliderBtn" (click)="prev()">&#10094;</button>
+  <button class="sliderBtn" (click)="next()">&#10095;</button>
+  <button class="sliderBtn" (click)="slide()">Slide</button>
+  <button class="sliderBtn" (click)="stopSlide()">Stop</button>
+</div>
