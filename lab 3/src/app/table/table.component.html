@@ -1,0 +1,19 @@
+<div>
+  <h3>Students</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (std of students; track $index) {
+      <tr>
+        <td>{{ std.name }}</td>
+        <td>{{ std.age }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
